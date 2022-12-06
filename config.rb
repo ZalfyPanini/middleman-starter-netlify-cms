@@ -37,15 +37,6 @@ end
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/
 
-# proxy product.yml files to product.html 
-data.documentation.each do |_filename, documentation|
-  # product is an array: [filename, {data}]
-  proxy "/documentation/#{documentation[:title].parameterize}/index.html", "documentation.html",
-  locals: {documentation: documentation},
-  layout: 'documentation-detail',
-  ignore: true
-end
-
 # Helpers
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/

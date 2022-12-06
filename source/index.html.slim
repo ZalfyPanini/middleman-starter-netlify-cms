@@ -22,11 +22,3 @@ section.homepage-news.news
       - blog.articles.first(2).each do | article |
         = partial 'partials/news/news_item', locals: {article: article}
 
-section.homepage-documentation
-  .container
-    h2
-      | Documentation
-        .documentation-items
-          //get the two latest documentation items
-          - documentation.articles.first(2).each do | article |
-            = partial 'partials/documentation/documentation_item', locals: {article: article}
